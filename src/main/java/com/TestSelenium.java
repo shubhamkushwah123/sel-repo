@@ -15,12 +15,13 @@ public class TestSelenium {
 		System.out.println("hello maven");
 		System.setProperty("webdriver.chrome.driver","/home/ubuntu/chromedriver");
 		ChromeOptions chromeOptions = new ChromeOptions();
-		chromeOptions.addArguments("--start-maximized") 
+		chromeOptions.addArguments("--start-maximized");
 		//;#open Browser in maximized mode
 		chromeOptions.addArguments("--no-sandbox"); 
 		//#bypass OS security model
 		chromeOptions.addArguments("--disable-dev-shm-usage") ;
 		chromeOptions.addArguments("--headless");
+		chromeOptions.addArguments("chrome.switches","--disable-extensions");
 		WebDriver webDriver = new ChromeDriver(chromeOptions);
 		
 		System.out.println("Hi, Welcome to the Edureka test Cases");
