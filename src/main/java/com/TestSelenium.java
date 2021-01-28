@@ -25,6 +25,12 @@ public class TestSelenium {
 		//chromeOptions.addArguments("--disable-dev-shm-usage") ;
 		//chromeOptions.addArguments("--headless");
 		//chromeOptions.addArguments("chrome.switches","--disable-extensions");
+		chromeOptions.addArguments("start-maximized"); // open Browser in maximized mode
+		chromeOptions.addArguments("disable-infobars"); // disabling infobars
+		chromeOptions.addArguments("--disable-extensions"); // disabling extensions
+		chromeOptions.addArguments("--disable-gpu"); // applicable to windows os only
+		chromeOptions.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
+		chromeOptions.addArguments("--no-sandbox"); // Bypass OS security model
 		WebDriver webDriver = new ChromeDriver(chromeOptions);
 		
 		System.out.println("Hi, Welcome to the Edureka test Cases");
