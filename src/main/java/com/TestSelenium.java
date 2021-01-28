@@ -15,11 +15,16 @@ public class TestSelenium {
 		System.out.println("hello maven");
 		System.setProperty("webdriver.chrome.driver","/home/ubuntu/chromedriver");
 		ChromeOptions chromeOptions = new ChromeOptions();
+		chromeOptions.addArguments("--start-maximized") 
+		//;#open Browser in maximized mode
+		chromeOptions.addArguments("--no-sandbox"); 
+		//#bypass OS security model
+		chromeOptions.addArguments("--disable-dev-shm-usage") ;
 		chromeOptions.addArguments("--headless");
 		WebDriver webDriver = new ChromeDriver(chromeOptions);
 		
 		System.out.println("Hi, Welcome to the Edureka test Cases");
-		webDriver.get("http://ip-172-31-29-215.us-east-2.compute.internal:8888/addressbook");
+		webDriver.get("http://ec2-18-224-17-80.us-east-2.compute.amazonaws.com:8888/addressbook");
 		
 		webDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		webDriver.findElement(By.className("v-button")).click();
