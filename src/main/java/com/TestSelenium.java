@@ -14,16 +14,16 @@ public class TestSelenium {
 		// TODO Auto-generated method stub
 		System.out.println("hello maven");
 		//local
-		//System.setProperty("webdriver.chrome.driver","/Users/shubham/Documents/Softwares/chrome-driver/chromedriver");
+		System.setProperty("webdriver.chrome.driver","/Users/shubham/Documents/Softwares/chrome-driver/chromedriver");
 		//ubuntu
-		System.setProperty("webdriver.chrome.driver","/home/ubuntu/chromedriver");
+		//System.setProperty("webdriver.chrome.driver","/home/ubuntu/chromedriver");
 		ChromeOptions chromeOptions = new ChromeOptions();
 		//chromeOptions.addArguments("--start-maximized");
 		//;#open Browser in maximized mode
 		//chromeOptions.addArguments("--no-sandbox"); 
 		//#bypass OS security model
 		//chromeOptions.addArguments("--disable-dev-shm-usage") ;
-		//chromeOptions.addArguments("--headless");
+		chromeOptions.addArguments("--headless");
 		//chromeOptions.addArguments("chrome.switches","--disable-extensions");
 		chromeOptions.addArguments("start-maximized"); // open Browser in maximized mode
 		chromeOptions.addArguments("disable-infobars"); // disabling infobars
