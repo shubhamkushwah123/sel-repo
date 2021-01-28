@@ -15,6 +15,7 @@ public class TestSelenium {
 		System.out.println("hello maven");
 		System.setProperty("webdriver.chrome.driver","/home/ubuntu/chromedriver");
 		ChromeOptions chromeOptions = new ChromeOptions();
+		chromeOptions.addArguments("--headless");
 		WebDriver webDriver = new ChromeDriver(chromeOptions);
 		
 		System.out.println("Hi, Welcome to the Edureka test Cases");
