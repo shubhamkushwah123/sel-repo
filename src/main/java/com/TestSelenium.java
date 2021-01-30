@@ -34,7 +34,7 @@ public class TestSelenium {
 		WebDriver webDriver = new ChromeDriver(chromeOptions);
 		
 		System.out.println("Hi, Welcome to the Edureka test Cases");
-		webDriver.get("http://http://ec2-18-218-112-17.us-east-2.compute.amazonaws.com:8888/addressbook");
+		webDriver.get("http://http://3.135.18.55:8888/addressbook");
 		
 		webDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		webDriver.findElement(By.className("v-button")).click();
