@@ -25,16 +25,18 @@ public class TestSelenium {
 		//chromeOptions.addArguments("--disable-dev-shm-usage") ;
 		chromeOptions.addArguments("--headless");
 		//chromeOptions.addArguments("chrome.switches","--disable-extensions");
-		chromeOptions.addArguments("start-maximized"); // open Browser in maximized mode
-		chromeOptions.addArguments("disable-infobars"); // disabling infobars
-		chromeOptions.addArguments("--disable-extensions"); // disabling extensions
-		chromeOptions.addArguments("--disable-gpu"); // applicable to windows os only
-		chromeOptions.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
-		chromeOptions.addArguments("--no-sandbox"); // Bypass OS security model
-		WebDriver webDriver = new ChromeDriver(chromeOptions);
+		/*
+		 * chromeOptions.addArguments("start-maximized"); // open Browser in maximized
+		 * mode chromeOptions.addArguments("disable-infobars"); // disabling infobars
+		 * chromeOptions.addArguments("--disable-extensions"); // disabling extensions
+		 * chromeOptions.addArguments("--disable-gpu"); // applicable to windows os only
+		 * chromeOptions.addArguments("--disable-dev-shm-usage"); // overcome limited
+		 * resource problems chromeOptions.addArguments("--no-sandbox"); // Bypass OS
+		 * security model
+		 */		WebDriver webDriver = new ChromeDriver(chromeOptions);
 		
 		System.out.println("Hi, Welcome to the Edureka test Cases");
-		webDriver.get("http://3.135.18.55:8888/addressbook");
+		webDriver.get("http://ec2-18-217-205-218.us-east-2.compute.amazonaws.com:8888/addressbook");
 		
 		webDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		webDriver.findElement(By.className("v-button")).click();
